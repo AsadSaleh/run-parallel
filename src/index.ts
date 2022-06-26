@@ -13,9 +13,9 @@ export default function runParallel<T>({
 }) {
   let workCount = 0;
   async function recursivuh(): Promise<void> {
-    for (let i in data) {
-      const datum = data[i];
+    for (const i in data) {
       if (workCount < maxParalelProcess) {
+        const datum = data[i];
         if (!datum.isDone && !datum.isDownloading) {
           workCount++;
 
