@@ -4,6 +4,4 @@ export interface ParalellRunData<T = any> {
   payload: T;
 }
 
-export type ParallelRunFunction<T> = (
-  payload: ParalellRunData<T>["payload"]
-) => Promise<any>;
+export type ParallelRunFunction<T> = (payload: ParalellRunData<T>["payload"]) => Promise<any>;
